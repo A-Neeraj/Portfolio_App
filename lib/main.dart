@@ -45,29 +45,31 @@ class _MyHomePageState extends State<MyHomePage> {
             Column(
               children: <Widget>[
                 SizedBox(
-                  height: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.12,
                 ),
                 CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage('assets/images/w_1.jpg'),
+                  radius: 100.0,
+                  backgroundImage: AssetImage('assets/images/Neeraj.JPG'),
                 ),
                 Text(
                   'A. Neeraj',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 50.0,
+                      fontFamily: 'Permanent_Marker',
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   'Flutter Developer',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20.0,
+                      fontSize: 30.0,
+                      fontFamily: 'Parisienne',
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic),
                 ),
                 SizedBox(
-                  height: 200.0,
+                  height: MediaQuery.of(context).size.height * 0.2,
                 ),
                 Container(),
                 Container(
@@ -84,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               })
                       ])),
                       SizedBox(
-                        height: 50.0,
+                        height: MediaQuery.of(context).size.height * 0.05,
                       ),
                       CircleAvatar(
                         radius: 30.0,
