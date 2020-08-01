@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:my_portfolio/activities.dart';
 import 'package:my_portfolio/education.dart';
+import 'package:my_portfolio/experience.dart';
 import 'package:my_portfolio/interests.dart';
 import 'package:my_portfolio/main.dart';
 import 'package:my_portfolio/special_skills.dart';
@@ -17,6 +18,11 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+        ),
         body: Stack(children: <Widget>[
           ClipPath(
             clipper: MyClipper(),
@@ -80,6 +86,46 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 20, right: 20, top: 8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black,
+                      blurRadius: 2.0,
+                      spreadRadius: 0.0,
+                      offset:
+                          Offset(2.0, 2.0), // shadow direction: bottom right
+                    )
+                  ],
+                ),
+                height: 50,
+                child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Experience()));
+                  },
+                  color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        'Work Experience',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Rowdies',
+                        ),
+                      ),
+                      Icon(Icons.keyboard_arrow_right)
+                    ],
+                  ),
                 ),
               ),
               Container(
@@ -254,21 +300,21 @@ class _ProfileState extends State<Profile> {
               backgroundImage: AssetImage('assets/images/Neeraj.JPG'),
             ),
           ),
-          IconButton(
-            padding: EdgeInsets.only(
-              top: 10,
-              left: 10,
-            ),
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-              size: 40,
-            ),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => MyHomePage()));
-            },
-          ),
+//          IconButton(
+//            padding: EdgeInsets.only(
+//              top: 10,
+//              left: 10,
+//            ),
+//            icon: Icon(
+//              Icons.arrow_back,
+//              color: Colors.white,
+//              size: 40,
+//            ),
+//            onPressed: () {
+//              Navigator.push(context,
+//                  MaterialPageRoute(builder: (context) => MyHomePage()));
+//            },
+//          ),
         ]),
         bottomNavigationBar: BottomAppBar(
           child: Container(

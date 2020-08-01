@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Activities extends StatefulWidget {
-  @override
-  _ActivitiesState createState() => _ActivitiesState();
-}
-
-class _ActivitiesState extends State<Activities> {
+class Activities extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Text('Activities'),
+      appBar: AppBar(
+        title: Text('Activities'),
+        centerTitle: true,
       ),
+      body: SafeArea(child: Text('Activities')),
     );
   }
 }

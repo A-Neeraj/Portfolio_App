@@ -9,7 +9,11 @@ class _SpecialSkillsState extends State<SpecialSkills> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Special Skills'),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Special Skills'),
+      ),
+      body: SafeArea(child: Text('Special Skills')),
     );
   }
 }
