@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 import 'package:my_portfolio/certificate.dart';
 
 import 'data.dart';
@@ -14,8 +14,15 @@ class _EducationState extends State<Education> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text('Education'),
+        iconTheme: IconThemeData(color: Colors.black),
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          'Education',
+          style: TextStyle(color: Colors.black),
+        ),
         centerTitle: true,
       ),
       body: SafeArea(

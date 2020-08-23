@@ -31,6 +31,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
   url_launcher: ^5.5.0
+  linkable: ^1.0.4
+  slimy_card: ^1.0.4
 
 dev_dependencies:
   flutter_test:
@@ -61,6 +63,13 @@ flutter:
     - family: Rowdies
       fonts:
         - asset: fonts/Rowdies-Bold.ttf
+    - family: SonsieOne
+      fonts:
+        - asset: fonts/SonsieOne-Regular.ttf
+    - family: EBGaramond
+      fonts:
+        - asset: fonts/EBGaramond-VariableFont_wght.ttf
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

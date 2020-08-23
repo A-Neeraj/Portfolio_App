@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zoom_widget/zoom_widget.dart';
 import 'package:zoomable_image/zoomable_image.dart';
+
 import 'data.dart';
 
 class Certificate extends StatelessWidget {

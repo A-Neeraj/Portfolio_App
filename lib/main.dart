@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -33,14 +34,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
           body: Stack(children: <Widget>[
             Container(
-              decoration: new BoxDecoration(
-                  image: new DecorationImage(
-                image: new AssetImage('assets/images/background.jpg'),
-                fit: BoxFit.cover,
-              )),
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [Colors.blue, Colors.red])),
             ),
             Column(
               children: <Widget>[
@@ -88,28 +90,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.05,
                       ),
-                      CircleAvatar(
-                        radius: 30.0,
-                        backgroundColor: Colors.white,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.cyan[300],
-                          radius: 28.0,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: IconButton(
-                              icon: Icon(
-                                Icons.keyboard_arrow_down,
-                                color: Colors.white,
-                                size: 40.0,
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Profile()));
-                              },
-                            ),
+                      Container(
+                        alignment: Alignment(0, 0),
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.white, width: 2)),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.keyboard_arrow_down,
+                            color: Colors.white,
+                            size: 35.0,
                           ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Profile()),
+                            );
+                          },
                         ),
                       )
                     ],
